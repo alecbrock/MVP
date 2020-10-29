@@ -1,12 +1,15 @@
 import React from 'react';
 import ListItem from './ListItem.jsx';
+import Grid from '@material-ui/core/Grid';
 
-const List = (props) => (
-  <div>
-    <h4> List Component </h4>
-    There are { props.items.length } items.
-    { props.items.map(item => <ListItem item={item}/>)}
-  </div>
-)
+const List = (props) => {
+  return (
+    <Grid container>
+
+      { props.videoGameList.map((game, i) => ( game !== null ? <ListItem game={game} key={i} /> : null))}
+    </Grid>
+
+  )
+}
 
 export default List;
