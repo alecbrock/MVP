@@ -7,7 +7,13 @@ export default function StarMaker(props) {
     <div>
 
       <Typography component="legend">{props.rating}</Typography>
-      <Rating name="read-only" value={props.rating} readOnly />
+      <Rating
+      name="simple-controlled"
+      value={props.rating}
+      precision={0.2}
+      size="small"
+      readOnly
+    />
 
     </div>
   )

@@ -23,6 +23,9 @@ const useStyles = makeStyles({
     top: 100,
     left: 0,
     width: '100%',
+    color: '#fff',
+
+
   },
   star: {
     position: 'absolute',
@@ -47,7 +50,7 @@ const ListItem = (props) => {
           />
           <CardContent>
             {props.game.description_raw.length > 250 ? <Typography variant='body2' color="textSecondary" component="p">{props.game.description_raw.slice(0, 250)}...</Typography> : <Typography variant="body2" color="textSecondary" component="p">{props.game.description_raw}</Typography>}
-            <Typography className={classes.write}>{props.game.name}</Typography>
+            <Typography id='name' className={classes.write} variant='h6'>{props.game.name}</Typography>
             <StarMaker className={classes.star} rating={props.game.rating}/>
           </CardContent>
         </CardActionArea>
